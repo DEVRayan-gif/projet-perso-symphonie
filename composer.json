@@ -8,6 +8,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/doctrine-bundle": "^2.18",
+        "doctrine/doctrine-fixtures-bundle": "^4.3",
         "doctrine/doctrine-migrations-bundle": "^3.7",
         "doctrine/orm": "^3.6",
         "lexik/jwt-authentication-bundle": "^2.18",
@@ -23,9 +24,6 @@
         "symfony/serializer": "6.4.*",
         "symfony/validator": "6.4.*",
         "symfony/yaml": "6.4.*"
-    },
-    "require-dev": {
-        "symfony/maker-bundle": "^1.67"
     },
     "config": {
         "allow-plugins": {
@@ -74,5 +72,8 @@
             "allow-contrib": false,
             "require": "6.4.*"
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.67"
     }
 }
