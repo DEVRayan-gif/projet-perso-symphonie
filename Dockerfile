@@ -10,4 +10,4 @@ ENV APP_ENV=prod
 ENV APP_DEBUG=0
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 EXPOSE 8080
-CMD php bin/console doctrine:schema:create --no-interaction && php -S 0.0.0.0:$PORT router.php
+CMD php -S 0.0.0.0:$PORT router.php
