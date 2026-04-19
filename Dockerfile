@@ -14,4 +14,6 @@ RUN composer install --no-dev --optimize-autoloader
 
 EXPOSE 8080
 
+RUN php bin/console doctrine:migrations:migrate --no-interaction || true
+
 CMD ["php", "-S", "0.0.0.0:8080", "router.php"]
