@@ -8,6 +8,6 @@ WORKDIR /app
 COPY . .
 ENV APP_ENV=prod
 ENV APP_DEBUG=0
-RUN composer install --no-dev --optimize-autoloader --no-scripts
+RUN composer install --no-dev --optimize-autoloader
 EXPOSE 8080
 CMD php -S 0.0.0.0:$PORT router.php
