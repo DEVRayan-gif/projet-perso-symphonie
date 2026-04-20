@@ -9,6 +9,5 @@ COPY . .
 ENV APP_ENV=prod
 ENV APP_DEBUG=0
 RUN composer install --no-dev --optimize-autoloader --no-scripts
-RUN php bin/console cache:clear --no-warmup
 EXPOSE 8080
 CMD php bin/console doctrine:fixtures:load --no-interaction && php -S 0.0.0.0:8080 router.php
