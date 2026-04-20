@@ -11,3 +11,5 @@ ENV APP_DEBUG=0
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
+RUN a2dismod mpm_event && a2enmod mpm_prefork
+CMD doctrine:fixtures:load --no-interaction ; apache2-foreground
